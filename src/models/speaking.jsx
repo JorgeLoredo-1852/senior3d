@@ -7,18 +7,18 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 
 export function Model(props) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("/speaking.glb");
+  const { nodes, materials, animations } = useGLTF("/video.glb");
   const { ref, actions, names } = useAnimations(animations)
   
   useEffect(() => {
     // Reset and fade in animation after an index has been changed
     
-    if(props.loadingBanorte === false){
+    //if(props.loadingBanorte === false){
       actions[names[0]].play()
-    }
-    if(props.loadingBanorte === true){
-      actions[names[0]].stop()
-    }
+    //}
+    //if(props.loadingBanorte === true){
+      //actions[names[0]].stop()
+    //}
     console.log(props.loadingBanorte)
     
     // In the clean-up phase, fade it out
@@ -28,122 +28,239 @@ export function Model(props) {
 
 
   return (
-    <group ref={ref} {...props} dispose={null}>
+    <group ref={group} {...props} dispose={null}>
       <group name="Scene">
-        <group name="banorte_v6" scale={1} />
+        <group
+          name="SevenElven_v6"
+          position={[-1, 1.5, 0]}
+          rotation={[Math.PI / 2, 0, 0]}
+          scale={0.005}
+        >
+          <group name="Component11">
+            <group name="Component1" />
+          </group>
+          <group name="Component21">
+            <group name="Component2" />
+          </group>
+          <group name="Component31">
+            <group name="Component3" />
+          </group>
+        </group>
         <group
           name="Armature"
-          position={props.loadingBanorte ? [0,5.8,0] : [0, -0.14, 0]}
+          position={[0, -2.12, 1.31]}
           rotation={[Math.PI / 2, 0, 0]}
-          scale={0.35}
+          scale={0.01}
         >
-          <primitive object={nodes.mixamorigHips} />
+          <skinnedMesh
+            name="Body1"
+            geometry={nodes.Body1.geometry}
+            material={materials["Material.005"]}
+            skeleton={nodes.Body1.skeleton}
+          />
           <skinnedMesh
             name="Body1001"
             geometry={nodes.Body1001.geometry}
-            material={materials["Material.001"]}
+            material={materials["Material.005"]}
             skeleton={nodes.Body1001.skeleton}
           />
           <skinnedMesh
-            name="Body10001"
-            geometry={nodes.Body10001.geometry}
+            name="Body1003"
+            geometry={nodes.Body1003.geometry}
             material={materials["Material.003"]}
-            skeleton={nodes.Body10001.skeleton}
+            skeleton={nodes.Body1003.skeleton}
           />
           <skinnedMesh
-            name="Body11001"
-            geometry={nodes.Body11001.geometry}
-            material={materials["Material.003"]}
-            skeleton={nodes.Body11001.skeleton}
+            name="Body10"
+            geometry={nodes.Body10.geometry}
+            material={materials["Material.004"]}
+            skeleton={nodes.Body10.skeleton}
           />
           <skinnedMesh
-            name="Body14001"
-            geometry={nodes.Body14001.geometry}
-            material={materials["Material.003"]}
-            skeleton={nodes.Body14001.skeleton}
+            name="Body11"
+            geometry={nodes.Body11.geometry}
+            material={materials["Material.004"]}
+            skeleton={nodes.Body11.skeleton}
           />
           <skinnedMesh
-            name="Body15001"
-            geometry={nodes.Body15001.geometry}
-            material={materials["Material.003"]}
-            skeleton={nodes.Body15001.skeleton}
+            name="Body12"
+            geometry={nodes.Body12.geometry}
+            material={materials["Material.005"]}
+            skeleton={nodes.Body12.skeleton}
           />
           <skinnedMesh
-            name="Body18001"
-            geometry={nodes.Body18001.geometry}
-            material={materials["Material.003"]}
-            skeleton={nodes.Body18001.skeleton}
+            name="Body13"
+            geometry={nodes.Body13.geometry}
+            material={materials["Material.005"]}
+            skeleton={nodes.Body13.skeleton}
           />
           <skinnedMesh
-            name="Body19001"
-            geometry={nodes.Body19001.geometry}
+            name="Body15"
+            geometry={nodes.Body15.geometry}
+            material={materials["Material.002"]}
+            skeleton={nodes.Body15.skeleton}
+          />
+          <skinnedMesh
+            name="Body16"
+            geometry={nodes.Body16.geometry}
+            material={materials["Material.002"]}
+            skeleton={nodes.Body16.skeleton}
+          />
+          <skinnedMesh
+            name="Body17"
+            geometry={nodes.Body17.geometry}
+            material={materials["Material.005"]}
+            skeleton={nodes.Body17.skeleton}
+          />
+          <skinnedMesh
+            name="Body18"
+            geometry={nodes.Body18.geometry}
+            material={materials["Material.005"]}
+            skeleton={nodes.Body18.skeleton}
+          />
+          <skinnedMesh
+            name="Body19"
+            geometry={nodes.Body19.geometry}
             material={materials["Material.003"]}
-            skeleton={nodes.Body19001.skeleton}
+            skeleton={nodes.Body19.skeleton}
+          />
+          <skinnedMesh
+            name="Body2"
+            geometry={nodes.Body2.geometry}
+            material={materials["Material.005"]}
+            skeleton={nodes.Body2.skeleton}
           />
           <skinnedMesh
             name="Body2001"
             geometry={nodes.Body2001.geometry}
-            material={materials["Material.001"]}
+            material={materials["Material.002"]}
             skeleton={nodes.Body2001.skeleton}
           />
           <skinnedMesh
-            name="Body20001"
-            geometry={nodes.Body20001.geometry}
-            material={materials["Material.003"]}
-            skeleton={nodes.Body20001.skeleton}
+            name="Body22"
+            geometry={nodes.Body22.geometry}
+            material={materials["Material.004"]}
+            skeleton={nodes.Body22.skeleton}
           />
           <skinnedMesh
-            name="Body21001"
-            geometry={nodes.Body21001.geometry}
+            name="Body23"
+            geometry={nodes.Body23.geometry}
             material={materials["Material.003"]}
-            skeleton={nodes.Body21001.skeleton}
+            skeleton={nodes.Body23.skeleton}
           />
           <skinnedMesh
-            name="Body22001"
-            geometry={nodes.Body22001.geometry}
+            name="Body24"
+            geometry={nodes.Body24.geometry}
             material={materials["Material.003"]}
-            skeleton={nodes.Body22001.skeleton}
+            skeleton={nodes.Body24.skeleton}
           />
           <skinnedMesh
-            name="Body23001"
-            geometry={nodes.Body23001.geometry}
+            name="Body25"
+            geometry={nodes.Body25.geometry}
             material={materials["Material.003"]}
-            skeleton={nodes.Body23001.skeleton}
+            skeleton={nodes.Body25.skeleton}
           />
           <skinnedMesh
-            name="Body3001"
-            geometry={nodes.Body3001.geometry}
+            name="Body26"
+            geometry={nodes.Body26.geometry}
+            material={materials["Material.003"]}
+            skeleton={nodes.Body26.skeleton}
+          />
+          <skinnedMesh
+            name="Body27"
+            geometry={nodes.Body27.geometry}
+            material={materials["Material.003"]}
+            skeleton={nodes.Body27.skeleton}
+          />
+          <skinnedMesh
+            name="Body28"
+            geometry={nodes.Body28.geometry}
+            material={materials["Material.003"]}
+            skeleton={nodes.Body28.skeleton}
+          />
+          <skinnedMesh
+            name="Body29"
+            geometry={nodes.Body29.geometry}
+            material={materials["Steel - Satin.005"]}
+            skeleton={nodes.Body29.skeleton}
+          />
+          <skinnedMesh
+            name="Body3"
+            geometry={nodes.Body3.geometry}
+            material={materials["Material.002"]}
+            skeleton={nodes.Body3.skeleton}
+          />
+          <skinnedMesh
+            name="Body30"
+            geometry={nodes.Body30.geometry}
+            material={materials["Steel - Satin.005"]}
+            skeleton={nodes.Body30.skeleton}
+          />
+          <skinnedMesh
+            name="Body31"
+            geometry={nodes.Body31.geometry}
+            material={materials["Steel - Satin.005"]}
+            skeleton={nodes.Body31.skeleton}
+          />
+          <skinnedMesh
+            name="Body32"
+            geometry={nodes.Body32.geometry}
+            material={materials["Steel - Satin.005"]}
+            skeleton={nodes.Body32.skeleton}
+          />
+          <skinnedMesh
+            name="Body33"
+            geometry={nodes.Body33.geometry}
+            material={materials["Steel - Satin.005"]}
+            skeleton={nodes.Body33.skeleton}
+          />
+          <skinnedMesh
+            name="Body34"
+            geometry={nodes.Body34.geometry}
+            material={materials["Steel - Satin.005"]}
+            skeleton={nodes.Body34.skeleton}
+          />
+          <skinnedMesh
+            name="Body4"
+            geometry={nodes.Body4.geometry}
+            material={materials["Material.003"]}
+            skeleton={nodes.Body4.skeleton}
+          />
+          <skinnedMesh
+            name="Body5"
+            geometry={nodes.Body5.geometry}
+            material={materials["Material.003"]}
+            skeleton={nodes.Body5.skeleton}
+          />
+          <skinnedMesh
+            name="Body6"
+            geometry={nodes.Body6.geometry}
+            material={materials["Material.003"]}
+            skeleton={nodes.Body6.skeleton}
+          />
+          <skinnedMesh
+            name="Body7"
+            geometry={nodes.Body7.geometry}
             material={materials["Material.001"]}
-            skeleton={nodes.Body3001.skeleton}
+            skeleton={nodes.Body7.skeleton}
           />
           <skinnedMesh
-            name="Body6001"
-            geometry={nodes.Body6001.geometry}
+            name="Body8"
+            geometry={nodes.Body8.geometry}
             material={materials["Material.003"]}
-            skeleton={nodes.Body6001.skeleton}
+            skeleton={nodes.Body8.skeleton}
           />
           <skinnedMesh
-            name="Body7001"
-            geometry={nodes.Body7001.geometry}
+            name="Body9"
+            geometry={nodes.Body9.geometry}
             material={materials["Material.003"]}
-            skeleton={nodes.Body7001.skeleton}
+            skeleton={nodes.Body9.skeleton}
           />
-          <skinnedMesh
-            name="Body8001"
-            geometry={nodes.Body8001.geometry}
-            material={materials["Material.002"]}
-            skeleton={nodes.Body8001.skeleton}
-          />
-          <skinnedMesh
-            name="Body9001"
-            geometry={nodes.Body9001.geometry}
-            material={materials["Material.002"]}
-            skeleton={nodes.Body9001.skeleton}
-          />
+          <primitive object={nodes.mixamorigHips} />
         </group>
       </group>
     </group>
   );
 }
 
-useGLTF.preload("/speaking.glb");
+useGLTF.preload("/video.glb");

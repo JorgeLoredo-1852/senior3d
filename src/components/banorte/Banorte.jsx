@@ -9,9 +9,9 @@ const Banorte = ({loadingBanorte}) => {
         <>
             <ambientLight intensity={0.5}/>
             <Environment preset="forest" blur={0.5}/>
-            <OrbitControls enableZoom={false} enablePan={false} enableDamping={false} maxAzimuthAngle={Math.PI/36} minAzimuthAngle={-Math.PI/36} maxPolarAngle={Math.PI / 2 - Math.PI / 6} minPolarAngle={Math.PI / 2 - Math.PI / 6}></OrbitControls>
+            <OrbitControls enableZoom={false} enablePan={false} enableDamping={false} maxAzimuthAngle={0} minAzimuthAngle={0} maxPolarAngle={Math.PI / 2 - Math.PI / 6} minPolarAngle={Math.PI / 2 - Math.PI / 6}></OrbitControls>
             <group position={[-6.5, -4, 0]}>
-                <Speaking loadingBanorte = {loadingBanorte} position={[1,-4,-5]}/>
+                <Speaking loadingBanorte = {loadingBanorte} position={[1,-11,-5]}/>
                 <Piso position={[7, -5, -10]}/>
             </group>
         </>

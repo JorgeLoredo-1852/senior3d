@@ -144,31 +144,7 @@ const ChatText = ({loadingBanorte, setLoadingBanorte}) => {
             >
               <Grid container direction="column" alignItems="center">
                 <Grid item paddingTop="4rem">
-                  <Typography
-                    fontSize="1.2rem"
-                    textAlign="center"
-                    fontWeight="300"
-                  >
-                  </Typography>
-                  <Typography
-                    fontSize="4rem"
-                    textAlign="center"
-                    fontWeight="700"
-                    color="rgba(186, 1,1, 1)"
-                    sx = {{textShadow: "2px 2px 4px black"}}
-                  >
-                    Sr. Banorte
-                  </Typography>
-                </Grid>
-                <Grid item>
-                  <SmartToyIcon
-                    sx={{
-                      width: "6rem",
-                      height: "6rem",
-                      color: "rgba(186, 1,1, 1)",
-                      textShadow: "1px 1px 2px black"
-                    }}
-                  />
+                <img src="./sevenlyLogo.png" alt="" />
                 </Grid>
               </Grid>
             </Grid>
@@ -186,7 +162,7 @@ const ChatText = ({loadingBanorte, setLoadingBanorte}) => {
                 <Grid
                   item
                   sx={{
-                    backgroundColor: "#BA0101",
+                    backgroundColor: "#038061",
                     borderRadius: "1rem",
                     boxShadow: "0.1rem 0.1rem 0.5rem 0.1rem rgba(0,0,0,0.2)",
                     padding: "0.5rem 1rem 0.5rem 1rem",
@@ -210,7 +186,7 @@ const ChatText = ({loadingBanorte, setLoadingBanorte}) => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    backgroundColor: "#BA0101",
+                    backgroundColor: "#038061",
                   }}
                 >
                   <AccountCircleIcon
@@ -255,13 +231,8 @@ const ChatText = ({loadingBanorte, setLoadingBanorte}) => {
                       alignItems: "center",
                     }}
                   >
-                    <SmartToyIcon
-                      sx={{
-                        width: "1.5rem",
-                        height: "1.5rem",
-                        color: "#BA0101",
-                      }}
-                    />
+                <img src="./sevenlyLogo.jpg" alt=""/>
+
                   </Grid>
                 </Grid>
               </Grid>
@@ -302,7 +273,7 @@ const ChatText = ({loadingBanorte, setLoadingBanorte}) => {
             <Button
               variant="contained"
               onClick={() => sendMessage()}
-              sx={{ height: "100%", borderRadius: "100%" , marginLeft:"1rem", backgroundColor:"rgba(186, 1,1, 1)"}}
+              sx={{ height: "100%", borderRadius: "100%" , marginLeft:"1rem", backgroundColor:"#038061"}}
             >
               <SendIcon
                     sx={{
@@ -315,7 +286,7 @@ const ChatText = ({loadingBanorte, setLoadingBanorte}) => {
             <Button
               variant="contained"
               onClick={() => {startListening()}}
-              sx={{ height: "100%", borderRadius: "100%" , marginLeft:"1rem", backgroundColor:"rgba(186, 1,1, 1)"}}
+              sx={{ height: "100%", borderRadius: "100%" , marginLeft:"1rem", backgroundColor:"#038061"}}
             >
              <KeyboardVoiceIcon
                     sx={{
