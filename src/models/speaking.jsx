@@ -7,7 +7,7 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 
 export function Model(props) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("/video.glb");
+  const { nodes, materials, animations } = useGLTF("/Speaking.glb");
   const { ref, actions, names } = useAnimations(animations)
   
   useEffect(() => {
@@ -28,14 +28,13 @@ export function Model(props) {
 
 
   return (
-    <group ref={group} {...props} dispose={null}>
-      <group name="Scene">
+<group ref={ref} {...props} dispose={null}>
+<group name="Scene">
         <group
           name="SevenElven_v6"
           position={[-1, 1.5, 0]}
           rotation={[Math.PI / 2, 0, 0]}
-          scale={0.005}
-        >
+          scale={0.005}        >
           <group name="Component11">
             <group name="Component1" />
           </group>
@@ -46,12 +45,7 @@ export function Model(props) {
             <group name="Component3" />
           </group>
         </group>
-        <group
-          name="Armature"
-          position={[0, -2.12, 1.31]}
-          rotation={[Math.PI / 2, 0, 0]}
-          scale={0.01}
-        >
+        <group name="Armature" rotation={[Math.PI / 2, 0, 0]} scale={0.035}  position={[0, -2, -2]}>
           <skinnedMesh
             name="Body1"
             geometry={nodes.Body1.geometry}
@@ -263,4 +257,4 @@ export function Model(props) {
   );
 }
 
-useGLTF.preload("/video.glb");
+useGLTF.preload("/Speaking.glb");
